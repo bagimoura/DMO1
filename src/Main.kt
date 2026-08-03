@@ -1,14 +1,28 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    var num1 = 12;
+    var num2: Int = num1;
+    num1 = 55;
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    println("Digite a sua idade: ");
+    var idade = readln().toIntOrNull() ?: 0;
+
+    if(idade != null){
+        println("No ano que vem sua idade será: ${idade + 1}");
+    }else{
+        println("Idade digitada de forma incorreta: ${idade}");
     }
+
+    //exercício 1
+    println("Digite uma palavra: ");
+    var palavra = readln();
+
+    if(palavra != null){
+        println("Palavra em letras maiúsculas: ${palavra.uppercase()}");
+        println("Palavra em letras minúsculas: ${palavra.lowercase()}");
+    }else{
+        println("Palavra digitada de forma incorreta");
+    }
+
 }
